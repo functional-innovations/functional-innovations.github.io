@@ -1,1 +1,0 @@
-# functional-innovations.github.io
