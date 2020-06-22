@@ -1,0 +1,38 @@
+I"X<p>Some recent projects use ppg components, the performance requirements are lenient, the main things to shoot for is ease-of-use and cost efficiency.</p>
+
+<p>As a trend, integrated synchronized bio-potential sensing is a plus for extensibility. The text book method is to add analog channels capable of high input impedance, this is in contrast to the typical case where PPG uses TIA which offers limited input impedance. It takes effort to massage the specifications into the design window using TIA fixated topology.</p>
+
+<p>There are more to consider.  Although it is nice to have synchronized high impedance channels, however the techniques and sampling schemes may be difference between optical and bio-potential use cases, combining them may yeild sub-optimal performance for each specifically.</p>
+
+<p>For example, choice of ADC, a SDC (vs SAR) offers noise shaping, and sampling rate, where PPG implementations may desire to reduce sampling rate to lower power consumption, however for bio-potential frontend higher sampling rate typically yields better anti-aliasing when there are particular considerations. PPG integrated bio-potential sensing may face particular challenges, as means of antialising are pushed further up-front, since preamps are typically time shared and inputs are connected at specific time slots via input matrices.</p>
+
+<p>Current drain in most case are dominated by LED drive and duty cycle, it is nice to see lower quiescent current drain in general, though system integration should be carried out with a holistic view.</p>
+
+<p>PPG implementations are tricky in the sense that, electrical signal quality is heavily dependent on mechanical design and use conditions, when reading datasheet one should pay attention to details and inspect the claims. For example, motion artifact is one thing to pay attention to.</p>
+
+<p>Modules are great, maxim, ams and adi all have some nice offerings.</p>
+
+<p>This time we have a spirit to explore. There are a few parts we are learning about, these should be somewhat new, commercially readily available, and less expensive:</p>
+
+<h3 id="ams-as7026">AMS AS7026</h3>
+
+<p>The as7026 is a popular module solution from the IC fab AMS. Huami uses this part widely in their newer main stream wearables. It also integrates synchronized bio-potential channel. The complete dataset can be found below.</p>
+
+<p><a href="https://ams.com/documents/20143/36005/AS7026GG_DS000622_2-00.pdf/ca39f951-7705-079a-328a-0d3d069e4bd5">ams as7026</a>
+<!-- ![ams as7026](/assets/img/ppg_ams_as7026.jpg) --></p>
+
+<h3 id="ti-afe4900">TI AFE4900</h3>
+
+<p>The afe4900 component from TI is an interesting contender. It also offers high impedance channels in addition to optical sensing. Currently we can only read the abridged version of the datasheet, and waiting on TI to grant access to the full version. The abridged datasheet can be found here.</p>
+
+<p><a href="https://www.ti.com/lit/ds/symlink/afe4900.pdf">ti afe4900</a></p>
+
+<h3 id="maxim">MAXIM</h3>
+
+<p>Maxim has many <a href="https://www.maximintegrated.com/en/products/sensors/healthcare-sensor-ics/optical-health-sensors.html">offerings</a>, they have been offering a integrated module solution <a href="https://datasheets.maximintegrated.com/en/ds/MAX86150.pdf">max86150</a> for some time. Maxim’s ppg solution has been popular in the market.  On another note, their newer bio-potential part looks very good, here a link for the <a href="https://www.maximintegrated.com/en/products/analog/data-converters/analog-front-end-ics/MAX30003.html">max30003</a></p>
+
+<h2 id="adi-adpd4000">ADI ADPD4000</h2>
+
+<!-- ![adi adpd4000](/assets/img/ppg_adi_adpd4000.png) -->
+
+:ET
